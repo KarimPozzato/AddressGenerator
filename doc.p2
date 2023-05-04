@@ -1,0 +1,32 @@
+/// <summary>
+/// Classe che genera un indirizzo IPv4 a partire da un numero intero a 32 bit
+/// </summary>
+
+class AddressGenerator : IAddress
+{
+    private uint ipAddress;
+    
+    public AddressGenerator(uint ipAddress)
+    {
+        this.ipAddress = ipAddress;
+    }
+
+    /// <summary>
+    /// Genera un indirizzo IPv4 a partire dal numero intero a 32 bit passato al costruttore
+    /// </summary>
+    /// <returns>Una stringa che rappresenta l'indirizzo IPv4 generato</returns>
+    public string generateIPv4()
+    {
+        return new IPAddress(ipAddress).ToString();
+    }
+
+
+    /// <summary>
+    /// Restituisce la subnet mask 255.255.255.0
+    /// </summary>
+    /// <returns>Una stringa che rappresenta la subnet mask</returns>
+    public string generateSubnet()
+    {
+        return "255.255.255.0";
+    }
+}
