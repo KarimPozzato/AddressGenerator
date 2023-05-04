@@ -1,0 +1,31 @@
+Interfaccia IAddress
+L'interfaccia IAddress definisce due metodi per generare un indirizzo IPv4 e una subnet mask.
+
+metodo generateIPv4()
+Genera un indirizzo IPv4 valido.
+
+Restituisce: una rappresentazione di stringa dell'indirizzo IPv4 generato.
+
+metodo generateSubnet()
+Genera una subnet mask valida.
+
+Restituisce: una rappresentazione di stringa della subnet mask generata.
+
+Classe AddressGenerator
+La classe AddressGenerator implementa l'interfaccia IAddress e genera un indirizzo IPv4 e una subnet mask in base a un determinato valore a 32 bit.
+
+Costruttore di AddressGenerator(uint bit).
+Inizializza una nuova istanza della classe AddressGenerator con il valore a 32 bit specificato.
+
+Parametri:
+
+bit - Il valore a 32 bit da utilizzare per generare l'indirizzo IPv4 e la subnet mask.
+metodo generateIPv4()
+Implementa il metodo generateIPv4() dell'interfaccia IAddress.
+
+Restituisce: una rappresentazione di stringa dell'indirizzo IPv4 generato.
+
+metodo generateSubnet()
+Implementa il metodo generateSubnet() dell'interfaccia IAddress.
+
+Restituisce: una rappresentazione di stringa della subnet mask generata.
