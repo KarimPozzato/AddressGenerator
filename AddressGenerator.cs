@@ -27,8 +27,11 @@ namespace Class_AddressGenerator
             byte[] bytes = BitConverter.GetBytes(bits);
 
             if (BitConverter.IsLittleEndian)
-            {
-                Array.Reverse(bytes); // se il sistema è little-endian, invertiamo l'ordine dei byte
+            { 
+                Array.Reverse(bytes); 
+                // se il sistema è little-endian, invertiamo l'ordine dei byte
+                //Little-endian è un'organizzazione di byte in cui i byte meno significativi vengono memorizzati all'inizio della parola di memoria.
+                //bisogna invertire l'ordine dei byte per accedere correttamente ai singoli byte che compongono il valore.
             }
 
             return new IPAddress(bytes).ToString();
